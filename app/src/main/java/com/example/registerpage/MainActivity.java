@@ -31,19 +31,14 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinner = findViewById(R.id.spinner_gender);
 
         datePickerEditText = findViewById(R.id.datepicker);
-
         // Set listener untuk EditText
         datePickerEditText.setOnClickListener(v -> showDatePickerDialog());
-
         // Mengambil array string dari resources
         String[] genderOptions = getResources().getStringArray(R.array.gender_array);
-
         // Membuat adapter untuk Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderOptions);
-
         // Menetapkan layout dropdown untuk adapter
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         // Menetapkan adapter ke Spinner
         spinner.setAdapter(adapter);
 
@@ -63,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
                         datePickerEditText.setText(dateFormat.format(selectedDate.getTime()));
                     },
-                    year,
-                    month,
+                    year,month,
                     day
             );
 
