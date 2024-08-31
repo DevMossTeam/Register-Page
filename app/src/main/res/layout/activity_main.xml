@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="50dp"
         android:text="Sign Up"
         android:textAlignment="center"
@@ -29,12 +29,13 @@
         android:id="@+id/edt_fullname"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/rounded_background"
         android:drawableLeft="@drawable/ic_fullname"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Full Name"
+        android:textColor="#000000"
         android:inputType="text"
         android:paddingHorizontal="10dp"
         app:layout_constraintEnd_toEndOf="@+id/signuptitle"
@@ -82,7 +83,7 @@
         android:ems="10"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:hint="Tgl Lahir"
+        android:hint="date of birth"
         android:inputType="none"
         android:paddingLeft="10dp"
         android:background="@drawable/stroke_background"
@@ -128,8 +129,8 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_background"
         android:ems="10"
-        android:gravity="start|top"
-        android:hint="Alamat"
+        android:gravity="top|start"
+        android:hint="Address"
         android:inputType="textMultiLine"
         android:paddingHorizontal="10dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextPhone2"
@@ -156,11 +157,11 @@
         android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Sign Up"
-        android:textStyle="bold"
-        android:textSize="20dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/buttom"
+        android:text="Sign Up"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/edt_password"
         app:layout_constraintStart_toStartOf="@+id/edt_password"
         app:layout_constraintTop_toBottomOf="@+id/edt_password" />
@@ -171,12 +172,11 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/img_mediasosial"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:text="or sign up with"
-        android:textColor="#E9E9E9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <LinearLayout
         android:id="@+id/img_mediasosial"
@@ -206,5 +206,31 @@
             android:layout_margin="20dp"
             android:src="@drawable/img_register_twitter" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Already have an account?"
+        android:textSize="16dp"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="16dp"
+        android:text="Sign Up"
+        android:textColor="@color/buttom"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
