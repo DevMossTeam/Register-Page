@@ -5,19 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_register"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/signuptitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="50dp"
-        android:text="Sign Up"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="Create Account!"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +34,6 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Full Name"
-        android:textColor="#000000"
         android:inputType="text"
         android:paddingHorizontal="10dp"
         app:layout_constraintEnd_toEndOf="@+id/signuptitle"
@@ -76,7 +74,7 @@
 
     <EditText
         android:id="@+id/datepicker"
-        android:layout_width="147dp"
+        android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:clickable="true"
@@ -86,7 +84,7 @@
         android:hint="date of birth"
         android:inputType="none"
         android:paddingLeft="10dp"
-        android:background="@drawable/stroke_background"
+        android:background="@drawable/rounded_background"
         android:drawableLeft="@drawable/ic_tanggal"
         android:drawablePadding="10dp"
         app:layout_constraintStart_toStartOf="@+id/edt_email"
@@ -95,10 +93,10 @@
 
     <Spinner
         android:id="@+id/spinner_gender"
-        android:layout_width="157dp"
+        android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/stroke_background"
+        android:background="@drawable/rounded_background"
         android:entries="@array/gender_array"
         android:hint="Gender"
         app:layout_constraintEnd_toEndOf="@+id/edt_email"
@@ -125,7 +123,7 @@
     <EditText
         android:id="@+id/edt_alamat"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_background"
         android:ems="10"
@@ -158,7 +156,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/buttom"
+        android:background="@drawable/rounded_background"
         android:text="Sign Up"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -166,71 +164,115 @@
         app:layout_constraintStart_toStartOf="@+id/edt_password"
         app:layout_constraintTop_toBottomOf="@+id/edt_password" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/img_mediasosial"
-        android:layout_centerHorizontal="true"
+    <View
+        android:id="@+id/line1_login"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
         android:layout_marginTop="24dp"
-        android:text="or sign up with"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+    <View
+        android:id="@+id/line2_login"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Or sign up whith"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
 
     <LinearLayout
-        android:id="@+id/img_mediasosial"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@+id/btn_register"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/sosmed_google_login"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background"
         app:layout_constraintStart_toStartOf="@+id/btn_register"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="20dp"
-            android:src="@drawable/img_register_google" />
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dp"
+            android:src="@drawable/img_google" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="20dp"
-            android:src="@drawable/img_register_facebook" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="20dp"
-            android:src="@drawable/img_register_twitter" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="Google"
+            android:textColor="@color/black" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sosmed_facebook_login"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/img_facebook" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="Facebook"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    "
+
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="Already have an account?"
         android:textSize="16dp"
-        android:layout_marginLeft="40dp"
-        app:layout_constraintStart_toStartOf="@+id/btn_register"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sosmed_google_login"
+        tools:layout_editor_absoluteX="77dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
         android:text="Sign In"
-        android:textColor="@color/buttom"
+        android:textColor="#3F51B5"
         android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+        app:layout_constraintTop_toBottomOf="@+id/sosmed_facebook_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
