@@ -225,7 +225,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginTop="16dp"
-        android:text="Sign Up"
+        android:text="Sign In"
         android:textColor="@color/buttom"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="@+id/btn_register"
